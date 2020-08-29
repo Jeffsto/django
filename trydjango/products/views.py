@@ -17,10 +17,8 @@ def product_detail_view(request):
     return render(request, "products/product_detail.html", context)
 
 def dynamic_lookup_view(request, my_id):
-    try:
-        obj = Product.objects.get(id=my_id)
-    except Product.DoesNotExist:
-        raise Http404
+    obj = get_object_or_404(Product, id=my_id)
+    obj = Product.objects.get(id=my_id)
     context = {
         "object": obj
     }
