@@ -30,7 +30,7 @@ def product_delete_view(request, my_id):
         obj.delete()
         return redirect('../')
     context = {
-        'object': obj,
+        'object': obj
     }
     return render(request, "products/product_delete.html", context)
 
