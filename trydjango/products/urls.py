@@ -13,5 +13,3 @@ urlpatterns = [
     path('<int:my_id>/delete/', product_delete_view, name='product-delete'),
     path('', product_list_view, name="product-list")
 ]
-
-urlpatterns += staticfiles_urlpatterns()
