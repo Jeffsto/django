@@ -18,14 +18,18 @@ from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from pages import views
-from products.views import product_detail_view
-from products.views import product_create_view
-from products.views import dynamic_lookup_view
+from products.views import (
+    product_detail_view,
+    product_create_view,
+    dynamic_lookup_view,
+    product_delete_view
+    )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('products/<int:my_id>', dynamic_lookup_view, name='product'),
+    path('products/<int:my_id>/delete', product_delete_view, name='product-delete'),
     path('create/', product_create_view),
 ]
 
