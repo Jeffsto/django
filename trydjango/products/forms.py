@@ -30,6 +30,13 @@ class ProductForm(forms.ModelForm): # This is the django way to create a form
             'price',
         ]
 
+    class clean_title(self, *args, **kwargs):
+        title = self.cleaned_data.get("title")
+        if "CFE" in title:
+            return title
+        else:
+            raise forms.ValidationError("This is not a valid title")
+
 class RawProductForm(forms.Form): # this is the manual way to create a form
     title       = forms.CharField(
                         label='',
