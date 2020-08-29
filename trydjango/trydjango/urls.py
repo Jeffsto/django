@@ -20,6 +20,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from pages import views
 from products.views import product_detail_view
 from products.views import product_create_view
+from products.views import dynamic_lookup_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
