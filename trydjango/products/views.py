@@ -16,7 +16,7 @@ def product_detail_view(request):
     return render(request, "products/product_detail.html", context)
 
 def product_create_view(request):
-    my_form = RawProductForm()
+    my_form = RawProductForm(request.POST)
     context = {
         "form": my_form
     }
