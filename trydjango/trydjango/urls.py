@@ -22,8 +22,7 @@ from pages import views
 urlpatterns = [
     path('products/', include('products.urls')),
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('create/', product_create_view),
+    path('', views.home, name='home')
 ]
 
 urlpatterns += staticfiles_urlpatterns()
