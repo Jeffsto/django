@@ -1,7 +1,27 @@
 from django import forms
 from .models import Product
 
-class ProductForm(forms.ModelForm):
+class ProductForm(forms.ModelForm): # This is the django way to create a form
+    title       = forms.CharField(
+                        label='',
+                        widget=forms.TextInput(
+                                attrs={
+                                    "placeholder":"Your Title"
+                                }
+                            )
+    )
+    description = forms.CharField(
+                        required=False,
+                        widget=forms.Textarea(
+                                attrs={
+                                    "class":"new-class-name two",
+                                    "id": "my-id-for-textarea",
+                                    "rows": 5,
+                                    "columns": 20
+                                }
+                            )
+                        )
+    price       = forms.DecimalField(initial=199.99)
     class Meta:
         model = Product
         fields = [
@@ -11,7 +31,7 @@ class ProductForm(forms.ModelForm):
             'summary',
         ]
 
-class RawProductForm(forms.Form):
+class RawProductForm(forms.Form): # this is the manual way to create a form
     title       = forms.CharField(
                         label='',
                         widget=forms.TextInput(
