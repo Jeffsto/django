@@ -22,7 +22,7 @@ class RawProductForm(forms.Form):
     )
     description = forms.CharField(
                         required=False,
-                        widget=forms.textarea(
+                        widget=forms.Textarea(
                                 attrs={
                                     "class":"new-class-name two",
                                     "id": "my-id-for-textarea",
