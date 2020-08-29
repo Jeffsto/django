@@ -24,7 +24,7 @@ from products.views import product_create_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('product/', product_detail_view),
+    path('product/<int:my_id>', product_detail_view),
     path('create/', product_create_view),
 ]
 
