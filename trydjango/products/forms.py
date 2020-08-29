@@ -28,7 +28,6 @@ class ProductForm(forms.ModelForm): # This is the django way to create a form
             'title',
             'description',
             'price',
-            'summary',
         ]
 
 class RawProductForm(forms.Form): # this is the manual way to create a form
