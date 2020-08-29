@@ -35,7 +35,7 @@ class ProductForm(forms.ModelForm): # This is the django way to create a form
         if "title" in title:
             return title
         else:
-            raise forms.ValidationError("Form must contain \"title\""")
+            raise forms.ValidationError("Form must contain \"title\"")
 
 class RawProductForm(forms.Form): # this is the manual way to create a form
     title       = forms.CharField(
