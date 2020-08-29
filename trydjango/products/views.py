@@ -17,7 +17,7 @@ def product_detail_view(request):
 
 def product_create_view(request):
     context = {}
-    if request.metho == "POST":
+    if request.method == "POST":
         my_new_title = request.POST.get(title=my_new_title)
         print(my_new_title)
         # Product.ojbects.create(title=my_new_title)
