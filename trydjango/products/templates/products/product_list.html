@@ -2,8 +2,6 @@
 
 {% block content %}
 
-{{ object_list }}
-
 {% for instance in object_list %}
     <p> {{ instance.id }} - {{ instance.title }}</p>
 {% endfor %}
