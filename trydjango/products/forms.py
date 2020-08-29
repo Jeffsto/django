@@ -32,7 +32,7 @@ class ProductForm(forms.ModelForm): # This is the django way to create a form
 
     def clean_title(self, *args, **kwargs):
         title = self.cleaned_data.get("title")
-        if "CFE" in title:
+        if "title" in title:
             return title
         else:
             raise forms.ValidationError("Form must contain \"title\""")
