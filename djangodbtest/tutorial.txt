@@ -1,0 +1,9 @@
+#Good tutorial for using mysql as a backend
+https://www.digitalocean.com/community/tutorials/how-to-create-a-django-app-and-connect-it-to-a-database
+
+mysqlclient failed to install.  Had to execute 'sudo apt upgrade gcc'
+
+https://djangobook.com/mastering-django-2-book/
+
+Database
+https://www.youtube.com/watch?v=aHC3uTkT9r8&t=15s
