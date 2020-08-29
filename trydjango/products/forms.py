@@ -30,7 +30,7 @@ class ProductForm(forms.ModelForm): # This is the django way to create a form
             'price',
         ]
 
-    class clean_title(self, *args, **kwargs):
+    def clean_title(self, *args, **kwargs):
         title = self.cleaned_data.get("title")
         if "CFE" in title:
             return title
